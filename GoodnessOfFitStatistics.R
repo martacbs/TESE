@@ -1,5 +1,4 @@
-setwd("/Users/martasantos/Desktop/DadosNovosTese/ConsumosDiarios/hotelDados/")
-getwd()
+
 dadosHotelDiarios <- read.csv("hotelDados.csv", header=T, sep=";",skip = 0)
 View(dadosHotelDiarios)
 
@@ -189,8 +188,7 @@ autoplot(a)
 w<-ts(rgamma(n=100, shape=1, rate = 7.341))
 autoplot(w)
 
-setwd("/Users/martasantos/Desktop/DadosNovosTese/ConsumosDiarios/CentroHospitalar/")
-getwd()
+#------------------------------------------------------------------------#
 dadosHospital <- read.csv("hospitalData.csv", header=T, sep=";",skip = 0)
 View(dadosHospital)
 
