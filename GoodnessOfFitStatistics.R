@@ -1,6 +1,6 @@
-setwd("/Users/martasantos/Desktop/DadosNovosTese/ConsumosDiarios/DouroValley/")
+setwd("/Users/martasantos/Desktop/DadosNovosTese/ConsumosDiarios/hotelDados/")
 getwd()
-dadosHotelDiarios <- read.csv("DouroValleyDaily.csv", header=T, sep=";",skip = 0)
+dadosHotelDiarios <- read.csv("hotelDados.csv", header=T, sep=";",skip = 0)
 View(dadosHotelDiarios)
 
 inds <- seq(as.Date("2018-12-01"), as.Date("2019-11-30"), by = "day")
@@ -191,12 +191,12 @@ autoplot(w)
 
 setwd("/Users/martasantos/Desktop/DadosNovosTese/ConsumosDiarios/CentroHospitalar/")
 getwd()
-dadosCentroHospitalar <- read.csv("Dados_Diarios_Centro_Hospitalar.csv", header=T, sep=";",skip = 0)
-View(dadosCentroHospitalar)
+dadosHospital <- read.csv("hospitalData.csv", header=T, sep=";",skip = 0)
+View(dadosHospital)
 
 inds <- seq(as.Date("2018-12-01"), as.Date("2019-11-30"), by = "day")
 
-dadosHospitalDiarios <- cbind(inds,dadosCentroHospitalar)
+dadosHospitalDiarios <- cbind(inds,dadosHospital)
 
 head(dadosHospitalDiarios)
 myts2 <- ts(dadosHospitalDiarios$Consumo,     
